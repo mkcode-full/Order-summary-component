@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+:root {
+  /* --- Primary Colors --- */
+  --pale-blue: hsl(225, 100%, 94%);       /* Arka plan rengi */
+  --bright-blue: hsl(245, 75%, 52%);      /* Buton ve aktif link rengi */
+
+  /* --- Neutral Colors --- */
+  --very-pale-blue: hsl(225, 100%, 98%);  /* Kartın içindeki "Annual Plan" kutusunun arka planı */
+  --desaturated-blue: hsl(224, 23%, 55%); /* Paragraf metinleri */
+  --dark-blue: hsl(223, 47%, 23%);        /* Ana başlık rengi */
+
+  /* --- Typography --- */
+  --font-family: 'Red Hat Display', sans-serif;
+  --font-weight-normal: 500;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--font-family);
+    font-size: 16px;
+    background-color: var(--pale-blue);
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: no-repeat; 
+    background-size: contain;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 360px;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 100%;
+}
+.card-img {
+    width: 100%;
+    display: block;
+}
+.card-body {
+    padding: 30px;
+}
+.content-title {
+    color: var(--dark-blue);
+    font-size: 28px;
+    font-weight: var(--font-weight-black);
+}  
+.content-text {
+    color: var(--desaturated-blue);
+    font-weight: var(--font-weight-normal);
+    margin-top: 15px;
+}  
+.card-plan {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    background-color: var(--very-pale-blue);
+    padding: 15px; 
+    border-radius: 12px;
+    width: 100%;
+}
+.annual-plan {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.music-img {
+    width: 40px;
+    height: 40px;
+}
+.plan-title {
+    font-size: 16px;
+    font-weight: var(--font-weight-black);
+    color: var(--dark-blue);
+}
+.plan-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+.plan-price {
+    font-weight: var(--font-weight-normal);
+    color: var(--desaturated-blue);
+}
+.change a{
+    color: var(--bright-blue);
+    font-weight: var(--font-weight-black);
+    transition: color 0.3s;
+    font-size: 14px;
+}
+.change a:hover {
+    color: #766cf1; 
+    text-decoration: none; 
+}
+.bttn {
+    margin-top: 30px;
+    background-color: var(--bright-blue);
+    color: white;
+    padding: 14px;
+    width: 100%;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: var(--font-weight-bold);
+    cursor: pointer;
+    box-shadow: 0px 20px 20px rgba(56, 41, 224, 0.2);
+    border: none;
+}
+.bttn:hover {
+    background-color: rgb(120, 120, 255);
+}
+.cancel-bttn {
+ border: none;
+ background-color: transparent;
+ margin-block: 20px;
+ color: var(--desaturated-blue);
+ font-weight: var(--font-weight-black);
+ cursor: pointer;
+}
+.cancel-bttn:hover {
+    color: var(--dark-blue);
+}
+
+@media (max-width:375px) {
+ .content-title {
+    
+    font-size: 18px;
+    
+}  
+
+.content-text {
+    font-size: 12px;
+}
+
+
+.plan-title {
+    font-size: 12px;
+   
+}
+.plan-price {
+    font-size: 12px;
+}
+
+.change a{
+ 
+    font-size: 12px;
+}
+
+.bttn {
+    
+    font-size: 12px;
+   
+}
+
+
+}
